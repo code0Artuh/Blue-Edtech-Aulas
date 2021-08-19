@@ -8,6 +8,6 @@ console.log(cliente);
 
 var A = 100.98
 var B = 150
-var C = B - 101 
+var C = B - Math.round(A)
 
-console.log(`O cliente recebe o troco arredondado com o valor de ${C}.`);
+console.log(`O cliente recebe o troco arredondado com o valor de R$ ${C},00. `);
