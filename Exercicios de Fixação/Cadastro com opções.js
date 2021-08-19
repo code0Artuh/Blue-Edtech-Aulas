@@ -42,7 +42,10 @@ let final = prompt("Digite o número da opção");
 
 if (final === "1"){
 console.log (`Bem-Vindo(a) a Blue ${nomes[escolha-1]}`)} else{
-console.log("Ultima chance!!!")
+
+var chance = "Ultima chance!!!"
+
+console.log("\n ......" + chance)
   let nomes = ["Artur", "Giovana", "Richard"];
 
 console.log(`
