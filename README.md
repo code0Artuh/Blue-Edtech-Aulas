@@ -1,7 +1,5 @@
-# Blue-Edtech-Aulas
-Meus codigos durante o curso da Blue-Edtech
-
-<p align="center">
-  <img src="https://blueedtech.com.br/wp-content/themes/blue/dist/images/logo-blue-croped.gif" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+<p align="left">
+  <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQET4zubIYEjJQ/company-logo_200_200/0/1625249003866?e=2159024400&v=beta&t=AL_GUba4oxMd6gw0PcXSx3EpyI0F4bm5cBWF1m7OLSg" width="80px"
 </p>
+
+Meus codigos durante o curso da Blue-Edtech
