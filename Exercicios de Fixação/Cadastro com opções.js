@@ -16,7 +16,6 @@ Tem Certeza?
 1. ${definição[0]}
 2. ${definição[1]}`);
 let final = prompt("Digite o número da opção")
-if ("Sim"){
+if (final === '1'){
     console.log(`Bem-Vindo(a) a Blue ${nomes[escolha-1]}`)
   } else {console.log(`tente novamente`)}
-
