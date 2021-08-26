@@ -1,3 +1,5 @@
+//criei esta função pra corrigir a escrita da escolha,
+//na hora de comparar fica exato, sei que da pra facilitar de outras formas.
 function venv(variavel) {
   if (variavel == "PEDRA") {
     return "Pedra";
@@ -5,14 +7,16 @@ function venv(variavel) {
     return "Papel";
   } else if (variavel == "TESOURA") return "Tesoura";
 }
-console.log("Bem-Vindo ao Jokenpo da Blue");
-let nome = prompt(`\nPara começarmos digite seu nome:`);
+console.log("Bem-Vindo ao Jokenpo da Blue✌️😁\n 🪨  📝 ✂️");
+let nome = prompt(`\n🥸 Para começarmos digite seu nome:`);
+//declarei uma variavel com valor 0 pra poder iniciar uma função
+//o if chama a função se o contador for =0
 let count2 = 0;
 
 if (count2 === 0) {
   venv3();
 }
-
+//a função venv3 embarca a maior parte do codigo, a base central do jogo eu coloquei aqui dentro
 function venv3() {
   let ch = 0;
 
@@ -25,29 +29,30 @@ function venv3() {
   if (contador === 0) {
     venv2();
   }
-
+  //essa função venv2 esta dentro da função venv3, ela esta aqui pra poder separar
+  //separa os contadores que utilizo mais tarde com matematica pra ativar outras coisas
   function venv2() {
     let choose = venv(
-      prompt(`\n${nome} Escolha entre
+      prompt(`\n${nome} Escolha entre\n
 Pedra
 Papel
-Tesoura: `).toUpperCase()
+Tesoura\n: `).toUpperCase()
     );
-
+    //declarei aqui aslinhas que faz a escolha aleatoria
     var opções = ["Pedra", "Papel", "Tesoura"];
-
+    //ele pega aleatoriamente do array que declarei acima
     var comp = opções[Math.floor(Math.random() * opções.length)];
 
     if (choose === comp) {
       console.log(
         `\nVocê escolheu ${choose} e o computador ${comp} temos um empate`
       );
-    }
+    } //aqui eu começo uma cadeia de if pra fazer compare das escolhas e me dar um resultado
     if (choose === "Pedra" && comp === "Papel") {
       console.log(
         `\nVocê escolheu ${choose} e o computador escolheu ${comp} então você perdeu a rodada`
       );
-      co = co + 1;
+      co = co + 1; //pra cada resultado eu adiciono +1 ao contador referente ao resultado da comparação no jogo
     }
     if (choose === "Pedra" && comp === "Tesoura") {
       console.log(
@@ -79,33 +84,46 @@ Tesoura: `).toUpperCase()
       );
       co = co + 1;
     }
+    //aqui ao final de cada rodada eu diminuo -1 do valor digitado pelo usuario na escolha de rodadas
     rounds = rounds - 1;
-
+    //aqui eu criei um for bem interessante, ele tem o valor 0 e faz uma comparação ao valor rounds
+    //se a cada rodada eu diminuo um valor do valor digitado pelo usuario na escolha de rodadas
+    //em algum momento este contador chegara a 0, nesse exato momento o for para de chamar a função do jogo
     for (var i = 0; i !== rounds; venv2())
-    console.log(
-      `\nO jogador(a):${nome} ganhou ${ch} rodada(s) e o computador ganhou ${co} rodada(s)\n`
-    );
+      //daqui pra baixo tenho os resultados entregues levando em consideração a pontuação do jogador e do comp
+      console.log(
+        `\nO jogador(a):${nome} ganhou ${ch} rodada(s) e o computador ganhou ${co} rodada(s)\n`
+      );
 
     if (co === ch) {
-      console.log(`\nVamos aos resultados finais!!!\n \nInfelizmente temos um impate!!!`);
+      console.log(
+        `\nVamos aos resultados finais!!!\n \n(●'◡'●) Infelizmente temos um impate!!! (●'◡'●)`
+      );
     }
     if (ch > co) {
-      console.log(`\nVamos aos resultados finais!!!\n \nParabéns você é o vencedor!!!`);
+      console.log(
+        `\nVamos aos resultados finais!!!\n \no(≧▽≦)o Parabéns você é o vencedor!!! o(≧▽≦)o `
+      );
     }
     if (co > ch) {
-      console.log(`\nVamos aos resultados finais!!!\n \nInfelizmente você perdeu!!!`);
+      console.log(
+        `\nVamos aos resultados finais!!!\n \nಥ_ಥ Infelizmente você perdeu!!!ಥ_ಥ`
+      );
     }
   }
-  if (rounds < 1){
+  //logo após a entrega do resultado eu chamo meu ultimo prompt
+  //esse aqui só é ativado quando o rounds chega a 0
+  if (rounds < 1) {
     let final = String(
       prompt(`\nDeseja jogar novamente? sim ou não?`).toUpperCase()
     );
 
-    
-     if (final !== "SIM") {
+    //aqui eu finalizo o jogo se a resposta for diferente de sim
+    //e chamo a função la do começo se a pessoa quiser jogar novamente
+    if (final !== "SIM") {
       console.log("Obrigado por jogar!!!");
     } else {
       venv3();
-    }}
+    }
+  }
 }
-
