@@ -122,8 +122,8 @@ Tesoura\n: `).toUpperCase()
       prompt(`\nDeseja jogar novamente? sim ou não?`).toUpperCase()
     );
 
-    //aqui eu finalizo o jogo se a resposta for diferente de sim
-    //e chamo a função la do começo se a pessoa quiser jogar novamente
+    //aqui se a resposta for diferente de sim, finalizo o jogo
+    //se a pessoa quiser jogar novamente eu chamo a função venv3 la do inicio
     if (final !== "SIM") {
       console.log("Obrigado por jogar!!!");
     } else {
