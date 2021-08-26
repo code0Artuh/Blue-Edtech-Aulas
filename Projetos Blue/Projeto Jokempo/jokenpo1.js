@@ -7,6 +7,10 @@ function venv(variavel) {
     return "Papel";
   } else if (variavel == "TESOURA") return "Tesoura";
 }
+//no projeto anterior eu utilizei emojis tbm,
+//porem devo dar creditos ao bruno que neste projeto me informou
+//da possibilidade dos emojis globais do windows, e eu só conhecia uma limitada
+//cadeia de emojis pra usar.
 console.log("Bem-Vindo ao Jokenpo da Blue✌️😁\n 🪨  📝 ✂️");
 let nome = prompt(`\n🥸 Para começarmos digite seu nome:`);
 //declarei uma variavel com valor 0 pra poder iniciar uma função
