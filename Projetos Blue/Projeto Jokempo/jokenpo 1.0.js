@@ -39,7 +39,7 @@ function venv3() {
   //separa os contadores que utilizo mais tarde com matematica pra ativar outras coisas
   function venv2() {
     let choose = venv(
-      prompt(`\n${nome} Escolha entre\n
+      prompt(`\n${nome} É importante que você escreva a sua opção entre\n
 Pedra
 Papel
 Tesoura\n: `).toUpperCase()
