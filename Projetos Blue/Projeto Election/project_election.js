@@ -13,7 +13,7 @@ let nulo = 0;
 let branco = 0;
 
 function candidato(){
-    console.log("escolha o numero referente ao seu voto\ncandidato1 = 1\ncandidato2 = 2\ncandidato3 = 3\nnulo = 4\nbranco = 5\n")
+    console.log("escolha o numero referente ao seu voto\ncandidato1 = 1\ncandidato2 = 2\ncandidato3 = 3\nnulo = 4\nbranco = 5")
     let b = +prompt("Digite o numero: ");
     if(b === 1){
         cand1++;
