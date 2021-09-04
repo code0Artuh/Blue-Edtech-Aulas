@@ -1,17 +1,18 @@
 const prompt = require('prompt-sync')();
 
 console.log("Bem-vindo as eleições da Blue,\nMenores de 18 anos não podem votar\nMaiores de 50 anos tem voto opcional")
-
+//inicio pedindo quantidade só por interação, no fim do codigo eu dou a opção para receber votos.
 let qtd = +prompt("Quantas pessoas iram votar: ");
 
 let qnt = qtd;
-
+//poderia utilizar lista de objetos mas ainda n estou mt bom com manipulação de lista
+//então criei contadores
 let cand1 = 0;
 let cand2 = 0;
 let cand3 = 0;
 let nulo = 0;
 let branco = 0;
-
+//a função que contabiliza os votos.
 function candidato(){
     console.log("escolha o numero referente ao seu voto\ncandidato1 = 1\ncandidato2 = 2\ncandidato3 = 3\nnulo = 4\nbranco = 5")
     let b = +prompt("Digite o numero: ");
@@ -27,7 +28,7 @@ function candidato(){
         branco++;
     }
 }
-
+//função que entrega todos os resultados
 function resultados(){
     console.log("Exibindo os resultados:\n");
     console.log(`Candidato 1 recebeu ${cand1} votos.\n`);
@@ -73,7 +74,7 @@ let a = 0;
 if (a === 0){
     autorizaVoto();
 }
-
+//função que verifica o usuario e libera pra votar
 function autorizaVoto(){
     let ok = 0;
 let choose = 0;
@@ -112,6 +113,8 @@ let l = 0;
 if(l === 0){
     mais();
 }
+//aqui eu pergunto ao usuario se existe mais pessoas para votar e repito todo o codigo caso a resposta seja sim
+//caso seja não eu finalizo a contabilização de votos e entrego os resultados
 function mais(){
 let prg = +prompt("Mais alguem pra votar? 1-sim ou 2-não: ")
 if(prg === 1){
