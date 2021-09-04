@@ -7,6 +7,7 @@ let qtd = +prompt("Quantas pessoas iram votar: ");
 let qnt = qtd;
 //poderia utilizar lista de objetos mas ainda n estou mt bom com manipulação de lista
 //então criei contadores
+//depois de estudar bastante vou lembrar de criar uma versão com objetos em listas,desafio pessoal comigo mesmo
 let cand1 = 0;
 let cand2 = 0;
 let cand3 = 0;
