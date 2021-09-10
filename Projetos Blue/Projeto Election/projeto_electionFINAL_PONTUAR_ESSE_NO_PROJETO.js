@@ -98,7 +98,6 @@ function votacao(autorizacao, voto){
   console.log("Mais alguem pra votar?\n1- sim\n2- nao\n")
   let mais = +prompt("Digite: ")
   if(mais === 1){
-    autorizaVoto();
     votacao();
   }else{exibirResultados()}
 }
