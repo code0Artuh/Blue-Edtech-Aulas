@@ -1,13 +1,23 @@
 const prompt = require('prompt-sync')();
 
+console.log("==================================");
+console.log("===Bem Vindo as Eleições da Blue==");
+console.log("==================================");
+console.log("===Menores de 18 anos não vota====");
+console.log("==================================");
+console.log("==Acima de 50 anos voto opcional==");
+console.log("==================================");
+//Contabilizar os votos de acordo com os significados (3,0 pontos)
 let cand1 = 0;
 let cand2 = 0;
 let cand3 = 0;
 let nulo = 0;
 let branco = 0;
 
+//Ter uma função chamada exibirResultados() que deve mostrar: (2,0 pontos)
+
 function exibirResultados() {
-  console.log("Exibindo os resultados:\n");
+  console.log("\nExibindo os resultados:\n");
   console.log(`Candidato 1 recebeu ${cand1} votos.\n`);
   console.log(`Candidato 2 recebeu ${cand2} votos.\n`);
   console.log(`Candidato 3 recebeu ${cand3} votos.\n`);
@@ -45,7 +55,8 @@ function exibirResultados() {
     console.log("temos um empate");
   }
 }
-
+//Ter uma função chamada votacao(autorizacao, voto) que valida  e contabiliza o voto (número entre 1 e 5)
+// ou retorna a mensagem: "Você não pode votar", caso o voto não possa ser contabilizado; (2,0 pontos)  
 function votacao(autorizacao, voto){
   autorizacao = autorizaVoto();
   if(autorizacao === "Negado"){
@@ -83,6 +94,7 @@ function votacao(autorizacao, voto){
   }else if(voto === 5){
     branco++
   }
+  //Receber votos até que o usuário diga que não tem mais ninguém para votar; (1,0 ponto)
   console.log("Mais alguem pra votar?\n1- sim\n2- nao\n")
   let mais = +prompt("Digite: ")
   if(mais === 1){
@@ -92,9 +104,8 @@ function votacao(autorizacao, voto){
 }
 
 let call = 0;
-
+//Ter uma função chamada autorizaVoto(anoNascimento) retornando: "Negado`, "Opcional"  ou "Obrigatório"; (2,0 pontos)
 function autorizaVoto(anoNascimento){
-
   anoNascimento = +prompt("Digite o ano de nascimento: ");
   if (anoNascimento > 2003){
     return "Negado"
