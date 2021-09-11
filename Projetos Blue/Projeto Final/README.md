@@ -4,3 +4,7 @@ Este projeto foi desenvolvido em javascript,jquery,twine,html,css entre outras f
 O Github reclama do tamanho do código que ultrapassa as 30mil linhas então vou deixar um link do arquivo pra baixar e testar
 
 https://mega.nz/file/xwx0gQJK#wGbcjGEwCRf53Id1qIaWV5YdWnMlmm7bnFS-IM8O7bY
+
+chave caso peça:
+
+wGbcjGEwCRf53Id1qIaWV5YdWnMlmm7bnFS-IM8O7bY
