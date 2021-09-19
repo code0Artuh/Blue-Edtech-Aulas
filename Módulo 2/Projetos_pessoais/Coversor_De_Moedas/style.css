@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap");
+
+body {
+  font-family: "Prompt", monospace;
+  min-height: 400px;
+  background-color: #000000;
+  background-size: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.banner .bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(https://wallpaperaccess.com/full/3331322.jpg) center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+body img {
+  opacity: 0.8;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+input {
+  margin: 12px;
+  padding: 6px;
+  border-radius: 5px;
+}
+label {
+  color: white;
+}
+
+button {
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+h2 {
+  color: green;
+  font-size: 30px;
+  text-shadow: -1px -1px white;
+}
