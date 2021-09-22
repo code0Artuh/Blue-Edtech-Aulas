@@ -1,8 +1,8 @@
     var currentImgIndex=0;
     var ImgSrcArray = [
-    'triste.jpg',
-    'bravo.jpg',
-    'feliz.jpg'
+    'triste1.jpg',
+    'bravo1.jpg',
+    'feliz1.jpg'
     ];
     var humor = [
         'Triste',
