@@ -11,12 +11,24 @@ html {
   }
 
 body{
-    background: url(https://images7.alphacoders.com/316/thumb-1920-316707.jpg);
+    
+    background-color: black;
+    
 }
 
+.banner .bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(https://wallpapercave.com/wp/wp4726440.jpg) top left;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
 
 h1{
-    width: 1370px;
     height: 50px;
 	box-shadow: 2px 2px;
     background-color: white;
