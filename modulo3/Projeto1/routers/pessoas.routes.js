@@ -25,4 +25,24 @@ router.post('/add', async (req,res) => { //add nova pessoa no banco
     })
 });
 
+router.put('/edit/:id', async (req,res) => { //edita pessoa no banco
+    await Pessoa.findByIdAndUpdate(req.params.id, req.body).then(() => {
+        res.status(200).json({message: "alterado com sucesso"});
+    }
+    ).catch((err) => {
+        res.status(400).json({message: "algo esta errado"});
+        console.error(err);
+    }
+)});
+
+router.delete('/delete/:id', async (req,res) => { //edita pessoa no banco
+    await Pessoa.findByIdAndDelete(req.params.id).then(() => {
+        res.status(200).json({message: "deletado com sucesso"});
+    }
+    ).catch((err) => {
+        res.status(400).json({message: "algo esta errado"});
+        console.error(err);
+    }
+)});
+
 module.exports = router;
