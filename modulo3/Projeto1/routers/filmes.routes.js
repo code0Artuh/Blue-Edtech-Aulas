@@ -35,7 +35,7 @@ router.put('/edit/:id', async (req,res) => { //edita pessoa no banco
     }
 )});
 
-router.put('/delete/:id', async (req,res) => { //edita pessoa no banco
+router.delete('/delete/:id', async (req,res) => { //edita pessoa no banco
     await Filmes.findByIdAndDelete(req.params.id).then(() => {
         res.status(200).json({message: "deletado com sucesso"});
     }
