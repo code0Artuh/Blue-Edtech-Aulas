@@ -17,6 +17,9 @@ router.get('/listar', async (req,res) => {
 });
 
 router.post('/add', async (req,res) => { //add nova pessoa no banco
+    if(!req.body.nome || !req.body.genero || !req.body.plataforma){
+        res.status(400).json({message:"Preencha todos os campos"});
+    };
     await Jogos.create(req.body).then(() => {
         res.status(200).json({message: "cadastrado com sucesso"});
     }).catch((err) => {
@@ -26,6 +29,12 @@ router.post('/add', async (req,res) => { //add nova pessoa no banco
 });
 
 router.put('/edit/:id', async (req,res) => { //edita pessoa no banco
+    const id = req.params._id;
+    if(!id){res.status(404).json({message:"Não encontrado!"})}else
+    if(!req.body.nome || !req.body.genero || !req.body.plataforma){
+        res.status(400).json({message:"Preencha todos os campos"});
+    };
+
     await Jogos.findByIdAndUpdate(req.params.id, req.body).then(() => {
         res.status(200).json({message: "alterado com sucesso"});
     }
@@ -36,6 +45,8 @@ router.put('/edit/:id', async (req,res) => { //edita pessoa no banco
 )});
 
 router.delete('/delete/:id', async (req,res) => { //edita pessoa no banco
+    const id = req.params._id;
+    if(!id){res.status(404).json({message:"Não encontrado!"})}
     await Jogos.findByIdAndDelete(req.params.id).then(() => {
         res.status(200).json({message: "deletado com sucesso"});
     }
