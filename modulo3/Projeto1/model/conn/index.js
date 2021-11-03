@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");  //importando o mongoose
 
-function Conn(){
-    const { MongoClient } = require('mongodb');
-    const uri = "mongodb+srv://827581354455:827581354455@cluster0.svrkx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    client.connect(err => {
-      const collection = client.db("test").collection("devices");
-      // perform actions on the collection object
-      client.close();
+async function Conn(){
+    await mongoose.connect("mongodb://localhost:27017/API",{ // string de conexao ou local ou atlas
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }).then(() => { // tudo certo faz isso
+        console.log("MongoDB esta conectado");
+    }).catch((err) => { // caso de erro faz isso
+        console.error(err);
     });
-};
+}
 
-console.log("MongoDB conectado")
-
-module.exports = Conn;
+module.exports = Conn; //exporta a conexao

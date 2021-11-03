@@ -1,14 +1,23 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const port = 3000;
+const express = require("express");  //chamando o express
+const app = express();  //definindo o app como express
 
-app.use(express.json());
+app.use(express.json());  //definindo o JSON no projeto
 
-const Conn = require("./model/conn/index");
+const Conn = require("./model/conn/index"); //importando a conexao
 
-Conn();
+Conn(); //executa a func de conexao
 
+const port = 3000; //porta do node
 
-console.log("running on http:\\localhost:3000");
-app.listen(3000);
+const pessoasRouter = require("./routers/pessoas.routes");
+app.use('/pessoas',pessoasRouter);
+
+const filmesRouter = require("./routers/filmes.routes");
+app.use('/filmes',filmesRouter);
+
+const jogosRouter = require("./routers/jogos.routes");
+app.use('/jogos',jogosRouter);
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em: http://localhost:${port}`);
+});
