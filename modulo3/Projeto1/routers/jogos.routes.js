@@ -16,6 +16,21 @@ router.get('/listar', async (req,res) => {
     });
 });
 
+router.get('/byid/:id', async (req,res) => {
+    const id = req.params.id;  //recebendo nome por parametro
+    await Jogos.findOne({ _id:id }).then((jogos) => { //findOne retorna o primeiro que der match com o item passado
+        console.log(jogos);
+        if(jogos == null){ //validando se retorna null 
+            res.status(404).json({message: "nao foi encontrado"});
+        }else{
+            res.status(200).json(jogos);
+        }
+    }).catch((err) => {
+        res.status(404).json({message:"Nada foi encontrado"});
+        console.error(err);
+    });
+});
+
 router.post('/add', async (req,res) => { //add nova pessoa no banco
     if(!req.body.nome || !req.body.genero || !req.body.plataforma){
         res.status(400).json({message:"Preencha todos os campos"});

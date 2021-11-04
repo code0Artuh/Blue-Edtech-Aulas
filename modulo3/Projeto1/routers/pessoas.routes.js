@@ -16,6 +16,21 @@ router.get('/listar', async (req,res) => {
     });
 });
 
+router.get('/byid/:id', async (req,res) => {
+    const id = req.params.id;  //recebendo nome por parametro
+    await Pessoa.findOne({ _id:id }).then((pessoas) => { //findOne retorna o primeiro que der match com o item passado
+        console.log(pessoas);
+        if(pessoas == null){ //validando se retorna null 
+            res.status(404).json({message: "nao foi encontrado"});
+        }else{
+            res.status(200).json(pessoas);
+        }
+    }).catch((err) => {
+        res.status(404).json({message:"Nada foi encontrado"});
+        console.error(err);
+    });
+});
+
 router.post('/add', async (req,res) => { //add nova pessoa no banco
     if(!req.body.nome || !req.body.altura || !req.body.idade){
         res.status(400).json({message:"Preencha todos os campos"});
